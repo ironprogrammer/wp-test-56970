@@ -6,8 +6,8 @@ See [Trac 56970](https://core.trac.wordpress.org/ticket/56970) for additional de
 
 **This is an alternate approach to that proposed in https://github.com/ironprogrammer/wp-hotfix-56970.**
 
-## Purpose
-If testing with this plugin is shown to resolve the issues reported in [Trac 56970](https://core.trac.wordpress.org/ticket/56970), then the fix implemented here could be included in a future minor release.
+## Why a Testing Plugin?
+Because the issue occurs after upgrade from WordPress 5.9/6.0 to 6.1.1 specifically, is hard to reproduce. Making a plugin available to the community allows for easier and broader testing to validate whether this approach is works, especially when external caching is at play. If this plugin is found to address the reported issue, then the implementation may be adapted in an upcoming minor release.
 
 ## Installation
 Copy `test-56970.php` to your `wp-content/plugins/` folder, and activate it on the *Plugins > Installed Plugins* screen.
