@@ -4,6 +4,8 @@ Invalidates the global stylesheet transient, and resolves an inline CSS issue re
 
 See [Trac 56970](https://core.trac.wordpress.org/ticket/56970) for additional details.
 
+**This is an alternate approach to that proposed in https://github.com/ironprogrammer/wp-hotfix-56970.**
+
 ## Purpose
 If testing with this plugin is shown to resolve the issues reported in [Trac 56970](https://core.trac.wordpress.org/ticket/56970), then the fix implemented here could be included in a future minor release.
 
