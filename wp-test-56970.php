@@ -11,6 +11,12 @@ WP_Test_56970_Controller::init();
 class WP_Test_56970_Controller {
 	public static function init() {
 		add_action( 'init', 'wp_test_56970_init' );
+		register_activation_hook( __FILE__, array( __CLASS__, 'activate' ) );
+		register_deactivation_hook( __FILE__, array( __CLASS__, 'deactivate' ) );
+	}
+	public static function activate() {
+	}
+	public static function deactivate() {
 	}
 }
 
