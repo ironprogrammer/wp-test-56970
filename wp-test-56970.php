@@ -19,5 +19,7 @@ function wp_test_56970_init() {
 
 	// Issue described in Trac 56970 only affects upgrade from 5.9/6.0 to 6.1.1.
 	if ( '6.1.1' === $wp_version ) {
+		// Name of `global_styles_` stylesheet transient, e.g. 'global_styles_twentytwentyone'.
+		$transient_name = 'global_styles_' . get_stylesheet();
 	}
 }
