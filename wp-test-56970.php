@@ -5,3 +5,14 @@
  * Version: 0.1
  */
 
+// Initialize plugin.
+WP_Test_56970_Controller::init();
+
+class WP_Test_56970_Controller {
+	public static function init() {
+		add_action( 'init', 'wp_test_56970_init' );
+	}
+}
+
+function wp_test_56970_init() {
+}
