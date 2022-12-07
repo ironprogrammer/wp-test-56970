@@ -16,9 +16,13 @@ class WP_Test_56970_Controller {
 	}
 	public static function activate() {
 		add_option( 'wp_test_56970_run', true );
+		register_uninstall_hook( __FILE__, array( __CLASS__, 'uninstall' ) );
 	}
 	public static function deactivate() {
 		delete_option( 'wp_test_56970_run' );
+	}
+	public static function uninstall() {
+		self::deactivate();
 	}
 }
 
