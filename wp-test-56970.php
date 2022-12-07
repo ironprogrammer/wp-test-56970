@@ -27,4 +27,5 @@ function wp_test_56970_init() {
 }
 
 function wp_test_56970_transient_global_styles_stylesheet( $value, $transient ) {
+	return false;
 }
