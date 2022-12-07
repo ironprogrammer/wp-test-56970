@@ -21,5 +21,10 @@ function wp_test_56970_init() {
 	if ( '6.1.1' === $wp_version ) {
 		// Name of `global_styles_` stylesheet transient, e.g. 'global_styles_twentytwentyone'.
 		$transient_name = 'global_styles_' . get_stylesheet();
+		// Hook to invalidate the transient.
+		add_filter( "transient_$transient_name", 'wp_test_56970_transient_global_styles_stylesheet', 10, 2 );
 	}
+}
+
+function wp_test_56970_transient_global_styles_stylesheet( $value, $transient ) {
 }
