@@ -15,8 +15,10 @@ class WP_Test_56970_Controller {
 		register_deactivation_hook( __FILE__, array( __CLASS__, 'deactivate' ) );
 	}
 	public static function activate() {
+		add_option( 'wp_test_56970_run', true );
 	}
 	public static function deactivate() {
+		delete_option( 'wp_test_56970_run' );
 	}
 }
 
