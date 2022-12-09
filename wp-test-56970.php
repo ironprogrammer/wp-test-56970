@@ -48,3 +48,16 @@ function wp_test_56970_transient_global_styles_stylesheet( $value, $transient ) 
 
 	return false;
 }
+
+add_action( '_core_updated_successfully', '_delete_global_styles_stylesheet_transient' );
+if ( ! function_exists( '_delete_global_styles_stylesheet_transient' ) ) {
+	/**
+	 * Deletes the global styles stylesheet transient.
+	 *
+	 * @since 6.1.2
+	 */
+	function _delete_global_styles_stylesheet_transient() {
+		$transient_name = 'global_styles_' . get_stylesheet();
+		delete_site_transient( "transient_{$transient_name}" );
+	}
+}
