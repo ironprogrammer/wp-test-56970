@@ -1,5 +1,12 @@
 # Test for Trac 56970
 
+----
+### UPDATE 2023-01-26
+
+This plugin is obsolete since the merge of WordPress/wordpress-develop#3712. See [Trac 57502](https://core.trac.wordpress.org/ticket/57502). Please disable and uninstall it.
+
+----
+
 Invalidates the global stylesheet transient, and resolves an inline CSS issue related to Gallery blocks when upgrading to WordPress 6.1.1. Tested with starting version of 5.9.5 and 6.0.3.
 
 See [Trac 56970](https://core.trac.wordpress.org/ticket/56970) for additional details.
